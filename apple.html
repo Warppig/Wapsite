@@ -1,0 +1,47 @@
+<html>
+<head>
+<style>
+body {
+	background-image: url("img/hot.gif")
+}
+img {
+	position: absolute
+}
+</style>
+</head>
+<body>
+
+<img id="app" src="img/apple.gif">
+
+<script>
+
+MP=[0,0]
+//ap
+function handler(e) {
+    MP[0] = e.clientX;
+    MP[1] = e.clientY;
+}
+
+window.addEventListener('mousemove', handler)
+
+//AAAA
+Pos=[0,0]
+interval = setInterval(function() {
+	Pos[0]=lerp(Pos[0],MP[0],.1);
+	Pos[1]=lerp(Pos[1],MP[1],.1);
+	
+	document.getElementById("app").style.transform=
+	"translate("+(Pos[0]-200)+"px,"+(Pos[1]-200)+"px)"
+}, 10);
+
+</script>
+
+<script src="mathy.js"></script>
+
+<audio controls autoplay loop>
+  <source src="scary.ogg" type="audio/ogg">
+  Your browser does not support the audio element you fucking dumbass.
+</audio>
+
+</body>
+</html>

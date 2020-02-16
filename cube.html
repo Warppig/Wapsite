@@ -1,0 +1,61 @@
+<html>
+<head>
+<style>
+body {
+	background-color: black
+}
+img {
+	position: absolute
+}
+</style>
+</head>
+<body>
+
+<img id="app" src="img/yay.png">
+
+<script>
+
+I=[false,false,false,false]
+document.addEventListener('keydown', function(event) {
+    if(event.keyCode == 65) I[0]=true //A
+	if(event.keyCode == 68) I[1]=true //D
+	if(event.keyCode == 87) I[2]=true //W
+	if(event.keyCode == 83) I[3]=true //S
+});
+document.addEventListener('keyup', function(event) {
+    if(event.keyCode == 65) I[0]=false //A
+	if(event.keyCode == 68) I[1]=false //D
+	if(event.keyCode == 87) I[2]=false //W
+	if(event.keyCode == 83) I[3]=false //S
+});
+
+
+//AAAA
+Pos=[0,0]
+Vel=[0,0]
+interval = setInterval(function() {
+	if (I[0]) Vel[0]--
+	if (I[1]) Vel[0]++
+	if (I[2]) Vel[1]--
+	if (I[3]) Vel[1]++
+	
+	Vel[0]=clamp(Vel[0],-10,10)
+	Vel[1]=clamp(Vel[1],-10,10)
+	
+	Vel[0]=lerp(Vel[0],0,.1)
+	Vel[1]=lerp(Vel[1],0,.1)
+	
+	Pos[0]+=Vel[0]
+	Pos[1]+=Vel[1]
+
+	//Move the guy
+	document.getElementById("app").style.transform=
+	"translate("+(Pos[0])+"px,"+(Pos[1])+"px)"
+}, 10);
+
+</script>
+
+<script src="mathy.js"></script>
+
+</body>
+</html>
