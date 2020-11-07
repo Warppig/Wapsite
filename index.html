@@ -24,7 +24,7 @@ p {
 <img src="img/logo.png" />
 
 <p style="font-size: 50px"><strong>
-this website was made by warppig he is awesome nd very cool
+this website was made by warppig he is awesome nd very cool (I AM CURRENTlY CURRENTLY RENOVATING)
 </strong></p>
 
 <p>offsite link</p>
@@ -36,6 +36,64 @@ this website was made by warppig he is awesome nd very cool
 <a href="https://twitter.com/wapcum">bird</a>
 </p>
 
+<!-- Le Button -->
+<button id=B_Cli onclick="C_Cli()">Click me</button>
+<button id=B_Sav onclick="C_Sav()">Click me</button>
+
+<script>
+//Change to external later I think it's broken huh
+
+//Stolen code (don't tell mum)
+function setCookie(cname,cvalue,exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires=" + d.toGMTString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  var user=getCookie("username");
+  if (user != "") {
+    alert("Welcome again " + user);
+  } else {
+     user = prompt("Please enter your name:","");
+     if (user != "" && user != null) {
+       setCookie("username", user, 30);
+     }
+  }
+}
+</script>
+<script>
+
+	function C_Cli() {
+		but++;
+		console.log(but);
+		document.getElementById("B_Cli").innerHTML = but
+	}
+	
+	function C_Sav() {
+		checkCookie();
+	}
+</script>
+
+
+<!-- After shit -->
 <br style="line-height: 150px;">
 <img src="img/smack.png"/>
 <a href="apple.html">scary apple please don't click</a>
@@ -56,7 +114,6 @@ style="width:300px;height:200px;">
 <img src="img/lie.png"/>
 
 <script>
-
 
 //Wee
 Pos=[0,0,0]
