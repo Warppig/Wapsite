@@ -16,6 +16,9 @@ p {
 .butt {
 	background-color: bfbfbf;
 }
+.bezel {
+	background-color: bfbfbf;
+}
 
 .sauce {
 	position: absolute
@@ -28,21 +31,21 @@ p {
 
 <img src="img/logo.png" />
 
-<p style="font-size: 30px">
+<p class='bezel' style="font-size: 20px">
 Update log:
-Things are now centered. Kinda freaky doe.
+<br>Things are now centered. Kinda freaky doe.
 </p>
 <p style="font-size: 50px"><strong>
 this website was made by warppig he is awesome nd very cool (I AM CURRENTlY CURRENTLY RENOVATING)
 </strong></p>
 
-<p>offsite link</p>
+<p style="font-size: 20px">Offsite linkage</p>
 <!-- note shit my crap penis -->
-<p style="font-size: 20px">
+<p class='bezel' style="font-size: 30px">
 <a href="https://www.youtube.com/channel/UCHIGDYTscjK49HdATHkXs-g">video</a>
-<a href="https://www.deviantart.com/warppig-lolxdd">picture</a>
-<a href="https://soundcloud.com/warppig">sound</a>
 <a href="https://twitter.com/wapcum">bird</a>
+<a style="font-size: 10px" href="https://www.deviantart.com/warppig-lolxdd">picture (old)</a>
+<a style="font-size: 10px" href="https://soundcloud.com/warppig">sound (old)</a>
 </p>
 
 <!-- Le Button -->
@@ -52,7 +55,9 @@ this website was made by warppig he is awesome nd very cool (I AM CURRENTlY CURR
 <script src="js/kitchen.js"></script>
 <script>
 
-	but = 0;
+	but = getCookie('Cnt');
+	if (but == '')
+		but = 0
 
 	function C_Cli() {
 		but++;
@@ -61,7 +66,7 @@ this website was made by warppig he is awesome nd very cool (I AM CURRENTlY CURR
 	}
 	
 	function C_Sav() {
-		checkCookie();
+		setCookie('Cnt',but,6969);
 	}
 </script>
 
