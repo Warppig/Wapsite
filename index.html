@@ -1,3 +1,4 @@
+<script src="js/used.js"></script>
 <html>
 <head>
 <style>
@@ -5,12 +6,15 @@
 body {
 	background-image: url("img/huh.jpg")
 }
+* {
+text-align: center;
+}
 p {
 	font-family: Arial;
 }
 
 .butt {
-	background-color: 00ff00;
+	background-color: bfbfbf;
 }
 
 .sauce {
@@ -21,8 +25,13 @@ p {
 </head>
 <body>
 
+
 <img src="img/logo.png" />
 
+<p style="font-size: 30px">
+Update log:
+Things are now centered. Kinda freaky doe.
+</p>
 <p style="font-size: 50px"><strong>
 this website was made by warppig he is awesome nd very cool (I AM CURRENTlY CURRENTLY RENOVATING)
 </strong></p>
@@ -37,49 +46,13 @@ this website was made by warppig he is awesome nd very cool (I AM CURRENTlY CURR
 </p>
 
 <!-- Le Button -->
-<button id=B_Cli onclick="C_Cli()">Click me</button>
-<button id=B_Sav onclick="C_Sav()">Click me</button>
+<button class='butt' id=B_Cli onclick="C_Cli()">I count!</button>
+<button class='butt' id=B_Sav onclick="C_Sav()">Save your count</button>
 
+<script src="js/kitchen.js"></script>
 <script>
-//Change to external later I think it's broken huh
 
-//Stolen code (don't tell mum)
-function setCookie(cname,cvalue,exdays) {
-  var d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  var expires = "expires=" + d.toGMTString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
-
-function getCookie(cname) {
-  var name = cname + "=";
-  var decodedCookie = decodeURIComponent(document.cookie);
-  var ca = decodedCookie.split(';');
-  for(var i = 0; i < ca.length; i++) {
-    var c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-}
-
-function checkCookie() {
-  var user=getCookie("username");
-  if (user != "") {
-    alert("Welcome again " + user);
-  } else {
-     user = prompt("Please enter your name:","");
-     if (user != "" && user != null) {
-       setCookie("username", user, 30);
-     }
-  }
-}
-</script>
-<script>
+	but = 0;
 
 	function C_Cli() {
 		but++;
@@ -112,8 +85,8 @@ style="width:300px;height:200px;">
 <br style="line-height: 800px;">
 <p>cum</p>
 <img src="img/lie.png"/>
-
 <script>
+document.title = "balls sex big black"
 
 //Wee
 Pos=[0,0,0]
