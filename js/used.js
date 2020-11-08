@@ -14,4 +14,4 @@ function faviFlip() {
 	setFavi(F_alt[F_num]);
 }
 
-interval = setInterval(faviFlip, 1000);
+setInterval(faviFlip, 1000);

@@ -1,0 +1,24 @@
+<a href="apple.html">Scary apple</a>
+<button class='butt' id=C_FrmTog onclick="C_FrmTog()">Open Embed</button>
+<br>
+<iframe id='pange' width="420" height="315" frameborder="2" style='display: none' allowfullscreen></iframe>
+<script>
+	setInterval(function() {
+	document.getElementById('pange').width = window.innerWidth - 50;
+	document.getElementById('pange').height = (window.innerWidth - 50)*(.5);
+	}, 1)
+	
+function C_FrmTog() {
+	x = document.getElementById("pange");
+	y = document.getElementById("C_FrmTog");
+		 if (x.style.display === "none") {
+		   x.style = 'display: block; margin: auto;';
+		   x.src = 'apple.html';
+		   y.innerHTML = 'Close/Refresh';
+		 } else {
+		   x.style.display = 'none';
+		   x.src = '';
+		   y.innerHTML = 'Open Embed';
+		 }
+	}
+</script>

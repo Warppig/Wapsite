@@ -1,4 +1,5 @@
 <script src="js/used.js"></script>
+
 <html>
 <head>
 <style>
@@ -28,19 +29,54 @@ p {
 </head>
 <body>
 
+<!-- Import -->
+<template>
+	<a href="apple.html">Scary apple</a>
+	<button class='butt' id=C_FrmTog onclick="C_FrmTog()">Open Embed</button>
+	<br>
+	<iframe id='pange' width="420" height="315" frameborder="2" style='display: none' allowfullscreen></iframe>
+	<script>
+		setInterval(function() {
+		document.getElementById('pange').width = window.innerWidth - 50;
+		document.getElementById('pange').height = (window.innerWidth - 50)*(.5);
+		}, 1)
+		
+	function C_FrmTog() {
+		x = document.getElementById("pange");
+		y = document.getElementById("C_FrmTog");
+			 if (x.style.display === "none") {
+			   x.style = 'display: block; margin: auto;';
+			   x.src = 'apple.html';
+			   y.innerHTML = 'Close/Refresh';
+			 } else {
+			   x.style.display = 'none';
+			   x.src = '';
+			   y.innerHTML = 'Open Embed';
+			 }
+		}
+	</script>
+</template>
+<!-- Import -->
 
+<!-- Log, Logo and shit -->
 <img src="img/logo.png" />
-
-<p class='bezel' style="font-size: 20px">
+<p class='bezel' style="font-size: 15px; text-align: left">
 Update log:
+<br>7/11/20
+<br>Added such a log.
 <br>Things are now centered. Kinda freaky doe.
+<br>butt t ton :-)
+<br>When I submitted this the first time I forgot to time stamp it oops!
 </p>
 <p style="font-size: 50px"><strong>
 this website was made by warppig he is awesome nd very cool (I AM CURRENTlY CURRENTLY RENOVATING)
 </strong></p>
 
+<!---->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cKu1nZE9gF0" frameborder="5" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<!-- Linky -->
 <p style="font-size: 20px">Offsite linkage</p>
-<!-- note shit my crap penis -->
 <p class='bezel' style="font-size: 30px">
 <a href="https://www.youtube.com/channel/UCHIGDYTscjK49HdATHkXs-g">video</a>
 <a href="https://twitter.com/wapcum">bird</a>
@@ -49,16 +85,22 @@ this website was made by warppig he is awesome nd very cool (I AM CURRENTlY CURR
 </p>
 
 <!-- Le Button -->
-<button class='butt' id=B_Cli onclick="C_Cli()">I count!</button>
-<button class='butt' id=B_Sav onclick="C_Sav()">Save your count</button>
+<button class='butt' id=B_Cli	onclick="C_Cli()">I count!</button>
+<button class='butt' id=B_Sav	onclick="C_Sav()">Save your count</button>
+<button class='butt' id=B_Ping	onclick="C_Ping()">Ping serbver</button>
+
+<!-- Frameage -->
+<template>
+<p>balls</p>
+</template>
 
 <script src="js/kitchen.js"></script>
 <script>
-
 	but = getCookie('Cnt');
 	if (but == '')
 		but = 0
 
+	//Button time
 	function C_Cli() {
 		but++;
 		console.log(but);
@@ -68,14 +110,34 @@ this website was made by warppig he is awesome nd very cool (I AM CURRENTlY CURR
 	function C_Sav() {
 		setCookie('Cnt',but,6969);
 	}
+	
+
+	function C_Ping() {
+		var temp, item, a, i;
+		temp = document.getElementsByTagName("template")[0];
+		//get the div element from the template:
+		item = temp.content.querySelector("div");
+		a = document.importNode(item, true);
+		a.text += 'balls'
+		document.body.appendChild(clon);
+	}
+	
 </script>
 
 
 <!-- After shit -->
 <br style="line-height: 150px;">
 <img src="img/smack.png"/>
-<a href="apple.html">scary apple please don't click</a>
 <p>boo!</p>
+<div id='mmbals'></div>
+<script>
+	var temp = document.getElementsByTagName("template")[0];
+	var clon = temp.content.cloneNode(true);
+	document.getElementById('mmbals').appendChild(clon);
+</script
+
+
+<div w3-include-html='framage.html'></div>
 
 <br style="line-height: 150px;">
 <img src="img/chug.png">
@@ -90,12 +152,14 @@ style="width:300px;height:200px;">
 <br style="line-height: 800px;">
 <p>cum</p>
 <img src="img/lie.png"/>
+
+
 <script>
 document.title = "balls sex big black"
 
 //Wee
 Pos=[0,0,0]
-interval = setInterval(function() {
+setInterval(function() {
 	Pos[0]+=1;
 	Pos[1]+=2;
 	Pos[2]+=3;
@@ -104,7 +168,6 @@ interval = setInterval(function() {
 	"rotateY("+Pos[1]+"deg) "+
 	"rotateY("+Pos[2]+"deg) ";
 }, 10);
-
 </script>
 
 </body>
