@@ -1,0 +1,23 @@
+body {
+	background-image: url("img/huh.jpg")
+}
+* {
+	text-align: center;
+}
+p {
+	font-family: Arial;
+}
+
+.butt {
+	background-color: bfbfbf;
+}
+.bezel {
+	background-color: bfbfbf;
+}
+.zelb {
+	background-color: cfbfbf;
+}
+
+.sauce {
+	position: absolute
+}
